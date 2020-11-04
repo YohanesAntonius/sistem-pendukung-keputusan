@@ -23,7 +23,7 @@
       </a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="./typography.html">
+      <a class="nav-link" href="./criterias">
         <i class="material-icons">library_books</i>
         <p>Kriteria</p>
       </a>

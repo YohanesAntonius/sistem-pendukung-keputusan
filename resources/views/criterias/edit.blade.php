@@ -9,26 +9,26 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header card-header-primary">
-                        <h4 class="card-title">Edit Data</h4>
-                        <p class="card-category">Complete your profile</p>
+                        <h4 class="card-title">Edit Kriteria</h4>
+                        <p class="card-category">Lengkapi Kriterianya</p>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="/civilians/{{ $civilians->id }}" enctype="multipart/form-data">
+                        <form method="POST" action="/criterias/{{ $criterias->id }}" enctype="multipart/form-data">
                             @method('patch')
                             @csrf
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group bmd-form-group">
-                                        <label for="nama" class="bmd-label-floating">Nama</label>
-                                        <input type="text" id="nama" name="nama" class="form-control"
-                                            value="{{$civilians->nama}}">
+                                        <label for="bobot" class="bmd-label-floating">Bobot</label>
+                                        <input type="text" id="bobot" name="bobot" class="form-control"
+                                            value="{{$criterias->bobot}}">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group bmd-form-group">
                                         <label for="usia" class="bmd-label-floating">Usia</label>
                                         <input type="text" id="usia" name="usia" class="form-control"
-                                            value="{{$civilians->usia}}">
+                                            value="{{$criterias->usia}}">
                                     </div>
                                 </div>
                             </div>
@@ -38,14 +38,14 @@
                                         <label for="status_pernikahan" class="bmd-label-floating">Status
                                             Pernikahan</label>
                                         <input type="text" id="status_pernikahan" name="status_pernikahan"
-                                            class="form-control" value="{{$civilians->status_pernikahan}}">
+                                            class="form-control" value="{{$criterias->status_pernikahan}}">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group bmd-form-group">
                                         <label for="pekerjaan" class="bmd-label-floating">Pekerjaan</label>
                                         <input type="text" id="pekerjaan" name="pekerjaan" class="form-control"
-                                            value="{{$civilians->pekerjaan}}">
+                                            value="{{$criterias->pekerjaan}}">
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                                     <div class="form-group bmd-form-group">
                                         <label for="pendapatan" class="bmd-label-floating">Pendapatan Perbulan</label>
                                         <input type="text" id="pendapatan" name="pendapatan" class="form-control"
-                                            value="{{$civilians->pendapatan}}">
+                                            value="{{$criterias->pendapatan}}">
                                     </div>
                                 </div>
                             </div>
@@ -64,18 +64,18 @@
                                         <label for="status_tinggal" class="bmd-label-floating">Status Tempat
                                             Tinggal</label>
                                         <input type="text" id="status_tinggal" name="status_tinggal"
-                                            class="form-control" value="{{$civilians->status_tinggal}}">
+                                            class="form-control" value="{{$criterias->status_tinggal}}">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group bmd-form-group">
                                         <label for="tanggungan" class="bmd-label-floating">Tanggungan</label>
                                         <input type="text" id="tanggungan" name="tanggungan" class="form-control"
-                                            value="{{$civilians->tanggungan}}">
+                                            value="{{$criterias->tanggungan}}">
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary pull-right">Ubah Data</button>
+                            <button type="submit" class="btn btn-primary pull-right">Ubah Kriteria</button>
                             {{-- <div class="clearfix"></div> --}}
                         </form>
                     </div>

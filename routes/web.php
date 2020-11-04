@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CriteriasController;
 use App\Http\Controllers\CiviliansController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +39,12 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::get('/civilians/{civilians}/edit', [CiviliansController::class, 'edit']);
     Route::patch('/civilians/{civilians}', [CiviliansController::class, 'update']);
     Route::get('/civilians/{civilians}', [CiviliansController::class, 'destroy']);
+    Route::get('/criterias', [CriteriasController::class, 'index']);
+    Route::get('/criterias/create', [CriteriasController::class, 'create']);
+    Route::post('/criterias', [CriteriasController::class, 'store']);
+    Route::get('/criterias/{criterias}/edit', [CriteriasController::class, 'edit']);
+    Route::patch('/criterias/{criterias}', [CriteriasController::class, 'update']);
+    Route::get('/criterias/{criterias}', [CriteriasController::class, 'destroy']);
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/logout', function () {
