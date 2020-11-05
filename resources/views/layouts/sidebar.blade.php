@@ -10,12 +10,12 @@
         <p>Dashboard</p>
       </a>
     </li>
-    <li class="nav-item ">
+    {{-- <li class="nav-item ">
       <a class="nav-link" href="./user.html">
         <i class="material-icons">person</i>
         <p>Data User</p>
       </a>
-    </li>
+    </li> --}}
     <li class="nav-item ">
       <a class="nav-link" href="/civilians">
         <i class="material-icons">content_paste</i>
@@ -31,19 +31,19 @@
     <li class="nav-item ">
       <a class="nav-link" href="./icons.html">
         <i class="material-icons">score</i>
-        <p>Nilai Warga</p>
+        <p>Alternatif</p>
       </a>
     </li>
     <li class="nav-item ">
       <a class="nav-link" href="./map.html">
-        <i class="material-icons">input</i>
-        <p>Analisa Warga</p>
+        <i class="material-icons">rules</i>
+        <p>Nilai Matriks</p>
       </a>
     </li>
     <li class="nav-item ">
       <a class="nav-link" href="./notifications.html">
-        <i class="material-icons">notifications</i>
-        <p>Notifikasi</p>
+        <i class="material-icons">receipt</i>
+        <p>Hasil Topsis</p>
       </a>
     </li>
     {{-- <li class="nav-item ">
