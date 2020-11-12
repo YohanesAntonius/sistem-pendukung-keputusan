@@ -37,7 +37,7 @@ class CriteriasController extends Controller
     public function store(Request $request)
     {
         Criterias::create($request->all());
-        return redirect('/criterias');
+        return redirect('/criterias')->with('pesan', 'Data kriteria berhasil ditambahkan');
     }
 
     /**
@@ -83,7 +83,7 @@ class CriteriasController extends Controller
             'tanggungan' => $request->tanggungan
         ]);
 
-        return redirect('/criterias');
+        return redirect('/criterias')->with('pesan', 'Data kriteria berhasil diubah');
     }
 
     /**
@@ -95,6 +95,6 @@ class CriteriasController extends Controller
     public function destroy(Criterias $criterias)
     {
         Criterias::destroy($criterias->id);
-        return redirect('/criterias');
+        return redirect('/criterias')->with('pesan', 'Data kriteria berhasil dihapus');
     }
 }

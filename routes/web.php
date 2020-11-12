@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlternativesController;
 use App\Http\Controllers\CriteriasController;
 use App\Http\Controllers\CiviliansController;
 use App\Http\Controllers\DashboardController;
@@ -45,6 +46,12 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::get('/criterias/{criterias}/edit', [CriteriasController::class, 'edit']);
     Route::patch('/criterias/{criterias}', [CriteriasController::class, 'update']);
     Route::get('/criterias/{criterias}', [CriteriasController::class, 'destroy']);
+    Route::get('/alternatives', [AlternativesController::class, 'index']);
+    Route::get('/alternatives/create', [AlternativesController::class, 'create']);
+    Route::post('/alternatives', [AlternativesController::class, 'store']);
+    Route::get('/alternatives/{alternatives}/edit', [AlternativesController::class, 'edit']);
+    Route::patch('/alternatives/{alternatives}', [AlternativesController::class, 'update']);
+    Route::get('/alternatives/{alternatives}', [AlternativesController::class, 'destroy']);
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/logout', function () {

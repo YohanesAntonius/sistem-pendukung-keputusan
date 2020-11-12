@@ -8,9 +8,9 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header card-header-primary">
-                        <h4 class="card-title ">Data Warga</h4>
+                        <h4 class="card-title ">Alternatif</h4>
                         {{-- <p class="card-category"> More data ?</p> --}}
-                    <a href="{{ url('/') }}/civilians/create" class="btn btn-secondary"> Tambah Data</a>
+                    <a href="{{ url('/') }}/alternatives/create" class="btn btn-secondary"> Tambah Data</a>
                     </div>
                     @if (session('pesan'))
                         <div class="alert alert-info">
@@ -29,22 +29,7 @@
                                             Nama
                                         </th>
                                         <th>
-                                            Usia
-                                        </th>
-                                        <th>
-                                            Status Pernikahan
-                                        </th>
-                                        <th>
-                                            Pekerjaan
-                                        </th>
-                                        <th>
-                                            Pendapatan Perbulan
-                                        </th>
-                                        <th>
-                                            Status Tempat Tinggal
-                                        </th>
-                                        <th>
-                                            Tanggungan
+                                            Bobot
                                         </th>
                                         <th>
                                             Opsi
@@ -52,19 +37,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($civilians as $warga)
+                                    @foreach ($alternatives as $alternatif)
                                     <tr>
                                         <td> {{ $loop->iteration }}</td>
-                                        <td> {{$warga->nama}} </td>
-                                        <td> {{$warga->usia}} </td>
-                                        <td> {{$warga->status_pernikahan}} </td>
-                                        <td> {{$warga->pekerjaan}} </td>
-                                        <td> {{$warga->pendapatan}} </td>
-                                        <td> {{$warga->status_tinggal}} </td>
-                                        <td> {{$warga->tanggungan}} </td>
+                                        <td> {{$alternatif->nama}} </td>
+                                        <td> {{$alternatif->bobot}} </td>
                                         <td>
-                                            <a href="/civilians/{{$warga->id}}/edit" class="btn btn-sm btn-warning">Edit</a>
-                                            <a href="/civilians/{{$warga->id}}" class="btn btn-sm btn-danger">Hapus</a>
+                                            <a href="/alternatives/{{$alternatif->id}}/edit" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="/alternatives/{{$alternatif->id}}" class="btn btn-sm btn-danger">Hapus</a>
                                         </td>
                                     </tr>
                                     @endforeach

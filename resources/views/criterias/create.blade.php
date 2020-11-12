@@ -10,7 +10,7 @@
                 <div class="card">
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">Tambah Kriteria</h4>
-                        <p class="card-category">Lengkapi Kriterianya</p>
+                        {{-- <p class="card-category">Lengkapi Kriterianya</p> --}}
                     </div>
                     <div class="card-body">
                         <form method="POST" action="/criterias">
@@ -19,7 +19,16 @@
                                 <div class="col-md-12">
                                     <div class="form-group bmd-form-group">
                                         <label for="bobot" class="bmd-label-floating">Bobot</label>
-                                        <input type="text" id="bobot" name="bobot" class="form-control">
+                                        <br>
+                                        <select name="bobot" id="bobot" class="form-control
+                                        @error('bobot') is-invalid @enderror" placeholder="Masukkan Bobot ...">
+                                        <option value="" disabled selected>Pilih Bobot...</option>
+                                        <option value="1" {{ old('bobot') == "1" ? 'selected':'' }} >1</option>
+                                        <option value="2" {{ old('bobot') == '2' ? 'selected':'' }} >2</option>
+                                        <option value="3" {{ old('bobot') == '3' ? 'selected':'' }} >3</option>
+                                        <option value="4" {{ old('bobot') == '4' ? 'selected':'' }} >4</option>
+                                        </select>
+                                    @error('bobot') <span class="invalid-feedback">{{ $message }}</span> @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-12">

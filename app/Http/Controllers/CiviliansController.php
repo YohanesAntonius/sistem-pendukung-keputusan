@@ -37,7 +37,7 @@ class CiviliansController extends Controller
     public function store(Request $request)
     {
         Civilians::create($request->all());
-        return redirect('/civilians');
+        return redirect('/civilians')->with('pesan', 'Data warga berhasil ditambahkan');
     }
 
     /**
@@ -83,7 +83,7 @@ class CiviliansController extends Controller
             'tanggungan' => $request->tanggungan
         ]);
 
-        return redirect('/civilians');
+        return redirect('/civilians')->with('pesan', 'Data warga berhasil diubah');
     }
 
     /**
@@ -95,6 +95,6 @@ class CiviliansController extends Controller
     public function destroy(Civilians $civilians)
     {
         Civilians::destroy($civilians->id);
-        return redirect('/civilians');
+        return redirect('/civilians')->with('pesan', 'Data warga berhasil dihapus');
     }
 }

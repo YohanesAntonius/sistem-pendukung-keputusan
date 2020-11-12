@@ -10,7 +10,7 @@
                 <div class="card">
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">Edit Data</h4>
-                        <p class="card-category">Complete your profile</p>
+                        {{-- <p class="card-category">Complete your profile</p> --}}
                     </div>
                     <div class="card-body">
                         <form method="POST" action="/civilians/{{ $civilians->id }}" enctype="multipart/form-data">

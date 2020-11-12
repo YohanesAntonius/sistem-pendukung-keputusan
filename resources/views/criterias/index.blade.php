@@ -9,9 +9,14 @@
                 <div class="card">
                     <div class="card-header card-header-primary">
                         <h4 class="card-title ">Kriteria</h4>
-                        <p class="card-category"> More data ?</p>
+                        {{-- <p class="card-category"> More data ?</p> --}}
                     <a href="{{ url('/') }}/criterias/create" class="btn btn-secondary"> Tambah Data</a>
                     </div>
+                    @if (session('pesan'))
+                        <div class="alert alert-info">
+                            <b>Sukses</b>:{{session('pesan')}}
+                        </div>
+                    @endif
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table">

@@ -29,7 +29,7 @@
       </a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="./icons.html">
+      <a class="nav-link" href="/alternatives">
         <i class="material-icons">score</i>
         <p>Alternatif</p>
       </a>
